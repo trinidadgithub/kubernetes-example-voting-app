@@ -5,10 +5,9 @@ metadata:
   labels:
     name: postgres-pod
     app: demo-voting-app
-data:
-  POSTGRES_DB: postgresdb
-  POSTGRES_USER: postgresadmin
-  POSTGRES_PASSWORD: admin123
+env:
+  - name: POSTGRES_PASSWORD
+    value: admin123
 
 spec:
   containers:
