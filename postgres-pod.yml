@@ -5,13 +5,13 @@ metadata:
   labels:
     name: postgres-pod
     app: demo-voting-app
-env:
-  - name: POSTGRES_PASSWORD
-    value: admin123
 
 spec:
   containers:
     - name: postgres
       image: postgres
+      env:
+        - name: POSTGRES_PASSWORD
+          value: admin123
       ports:
         - containerPort: 5432
